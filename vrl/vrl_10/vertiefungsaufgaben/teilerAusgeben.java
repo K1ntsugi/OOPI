@@ -10,15 +10,15 @@ public class teilerAusgeben
   {
     input();
     teilerOutput(z);
-  }aa
+  }
 
 
   public static void teilerOutput(int input)
   {
-
+    ;
   }
 
-  public static int input(void)
+  public static int input()
   {
     Scanner read = new Scanner(System.in);
     int z = 0;
@@ -26,5 +26,5 @@ public class teilerAusgeben
     z = read.nextInt();
     return z;
   }
-
+  
 }
