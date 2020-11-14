@@ -15,7 +15,7 @@ public class zahlenraten2
 {
   public static void main(String [] args)
   {
-    int i_guess = 0;
+    int i_guess = 0, i_guessOutput = 0;
     int i_counterAnzahl = 0;
     int i_counterSumme = 0;
     int [] arr_riddle = new int [5];
@@ -29,6 +29,7 @@ public class zahlenraten2
     // Zahl des Benutzers einlesen
     System.out.println("Bitte eine 5-stellige Zahl eingeben:");
     i_guess = read.nextInt();
+    i_guessOutput = i_guess;
     // Problem: Wie bekomme ich die einzelnen Zahlen aus dem int in einem array?    
     /*
     ------------------------Zahlen in ihre Elemente Zerlegen---------------------------
@@ -53,14 +54,16 @@ public class zahlenraten2
       }
     }
     // user output
+    System.out.print("\033[H\033[2J"); // ANSI escape code
+    System.out.flush();
     System.out.println("Das war die Zufallszahl: ");
     for (int k: arr_riddle)
     {
       System.out.print(k);
     }
     System.out.println("\n");
-    System.out.printf("Das war ihre geratene Zahl: %d. \n  ", i_guess);
-    System.out.printf("Die Anzahl der richten Ziffern beträgt: %d \n", i_counterAnzahl); 
+    System.out.printf("Das war ihre geratene Zahl: %d. \n  ", i_guessOutput);
+    System.out.printf("Die Anzahl der richten Ziffern beträgt: %d. \n", i_counterAnzahl); 
     System.out.printf("Die Summe der richten Ziffern beträgt: %d", i_counterSumme);
   }
 }
