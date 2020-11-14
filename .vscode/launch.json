@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - StackTest",
+            "request": "launch",
+            "mainClass": "StackTest",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch)",
             "request": "launch",
             "mainClass": ""

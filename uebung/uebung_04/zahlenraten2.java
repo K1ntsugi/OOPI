@@ -15,18 +15,52 @@ public class zahlenraten2
 {
   public static void main(String [] args)
   {
+    int i_guess = 0;
+    int i_counterAnzahl = 0;
+    int i_counterSumme = 0;
+    int [] arr_riddle = new int [5];
+    int [] arr_guess = new int [5];
     Scanner read = new Scanner(System.in);
-    int a = 0;
-    int [] riddle = new int [5];
-    int [] guess = new int [5];
-    // array random befüllen
-    for (int i = 0; i < riddle.length. i++)
+    //array random befüllen -> status: funktioniert
+    for (int i = 0; i < arr_riddle.length; i++)
     {
-      riddle[i] = (int) (9*Math.random());
+      arr_riddle[i] = (int) (9*Math.random());
     }
-    // array des benutzers einlesen
-
-
+    // Zahl des Benutzers einlesen
+    System.out.println("Bitte eine 5-stellige Zahl eingeben:");
+    i_guess = read.nextInt();
+    // Problem: Wie bekomme ich die einzelnen Zahlen aus dem int in einem array?    
+    /*
+    ------------------------Zahlen in ihre Elemente Zerlegen---------------------------
+    12345 % 10 = 5; 
+    12345 / 10 = 1234,5 -> ergo 1234 da der int Gleitkommazahlen nicht kennt und alles hinter dem Komma verloren geht
+    !Jetzt die Ergebnisse zwischenspeichern, damit im nächsten Schleifendurchlauf ->
+    1234 % 10 = 4;
+    1234 / 10 = 123 ^^
+    --------------------------------------loop-----------------------------------------
+    */
+    for (int i = 4; i >= 0; i--)
+    {
+      arr_guess[i] = i_guess%10;
+      i_guess /= 10;
+    }
+    for (int i = 0; i < arr_riddle.length; i++)
+    {
+      if (arr_guess[i] == arr_riddle[i])
+      {
+        i_counterAnzahl++;
+        i_counterSumme += arr_guess[i]; 
+      }
+    }
+    // user output
+    System.out.println("Das war die Zufallszahl: ");
+    for (int k: arr_riddle)
+    {
+      System.out.print(k);
+    }
+    System.out.println("\n");
+    System.out.printf("Das war ihre geratene Zahl: %d. \n  ", i_guess);
+    System.out.printf("Die Anzahl der richten Ziffern beträgt: %d \n", i_counterAnzahl); 
+    System.out.printf("Die Summe der richten Ziffern beträgt: %d", i_counterSumme);
   }
-
 }
