@@ -65,5 +65,6 @@ public class zahlenraten2
     System.out.printf("Das war ihre geratene Zahl: %d. \n", i_guessOutput);
     System.out.printf("Die Anzahl der richten Ziffern beträgt: %d. \n", i_counterAnzahl); 
     System.out.printf("Die Summe der richten Ziffern beträgt: %d", i_counterSumme);
+    read.close();
   }
 }
