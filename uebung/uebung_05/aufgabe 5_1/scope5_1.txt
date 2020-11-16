@@ -1,0 +1,14 @@
+Aufgabe 5.1 Klassen und Objekte
+a) Erweitern Sie ihre bisherige Klasse Student um einen weiteren Konstruktor,
+der Name, Matrikelnummer, Fach und Geburtsjahr erwartet. Verwenden Sie
+hier einen bereits bestehenden Konstruktor mit this().
+b) Fügen Sie Ihrer Klasse Student ein weiteres Attribut hinzu, in dem die
+Gesamtzahl aller bisherigen Studenten gespeichert ist. Die Anzahl soll
+automatisch mit jedem neuen Studenten erhöht werden.
+Schreiben Sie hierfür auch eine getAnzahl() funktion.
+c) Erzeugen Sie ein enum geschlecht mit den Einträgen MAENNLICH und
+WEIBLICH und legen Sie für die Klasse Student ein entsprechendes Attribut
+an, das Sie über eine getter und setter aufrufen.
+d) Optional: Wir nehmen an, dass alle Matrikelnummer nur dann gültig sind,
+wenn deren Quersumme gerade ist. Implementieren Sie eine Funktion
+isValid(), die dies prüft
