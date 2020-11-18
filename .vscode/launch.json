@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Verebung",
+            "request": "launch",
+            "mainClass": "Verebung",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Hochschule_2",
             "request": "launch",
             "mainClass": "Hochschule_2",

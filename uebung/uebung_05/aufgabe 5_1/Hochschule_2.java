@@ -2,19 +2,17 @@ public class Hochschule_2
 {
     public static void main (String [] args)
   {
-    Student_2 [] studierende = new Student_2[5];
-    studierende[0] = new Student_2("Max");
-    studierende[1] = new Student_2("Anna", 1994);
-    studierende[2] = new Student_2("Hannes", 1995, 34823904);
-    studierende[3] = new Student_2("Karla", 1996, 87981731);
-    studierende[4] = new Student_2("Tom", 1997, 93131331);
-
-    for (int i = 0; i < studierende.length; i++)
-    {
-      studierende[i].studieren();
-      studierende[i].essen();
-      studierende[i].studieren();
-      studierende[i].schlafen();
-    }
-  }    
+    genderType m = genderType.MÄNNLICH;
+    genderType f = genderType.WEIBLICH;
+    Student_2 karl = new Student_2("Karl", 1993, 24680);
+    Student_2 carla = new Student_2("Carla", 1992, 13579);
+    karl.setgenderType(m);
+    carla.setgenderType(f);
+    System.out.println("Karl ist " + karl.getType());
+    System.out.println("Carla ist " + carla.getType());
+    System.out.println("Die Matrikelnummer von Karl ist: ");
+    karl.isValid();
+    System.out.println("Die Matrikelnumer von Carla ist ");
+    carla.isValid();
+  }
 }

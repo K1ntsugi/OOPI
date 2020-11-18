@@ -6,35 +6,32 @@ public class Student_2
   String Name = "undefined";
   String Fach = "undefined";
   // Geschützte Attribute
-  private genderType type;
+  private genderType gender;
   // Statische Attribute
-  public static int countStudenten = 0;
+  private static int countStudenten = 0;
   // Konstruktoren 
   public Student_2 (String Name)
   {
-    this.Name = Name;
+    this(Name, -1, -1, "unbekannt");
   }
 
   public Student_2 (String Name, int Geburtsjahr)
   {
-    this(Name);
-    this.Geburtsjahr = Geburtsjahr;
+   this(Name, Geburtsjahr, -1, "unbekannt"); 
   }
 
   public Student_2 (String Name, int Geburtsjahr, int Matrikelnummer)
   {
-    this(Name, Geburtsjahr);
-    // Statt der Zeile 47 hatte ich ursprünglich:
-    // this(Name);
-    // this(Geburtsjahr);
-    // Das müsste doch eigentlich das gleiche wie meine obige Zeile 47 abdecken, funktioniert aber nicht. Verstehe noch nicht warum.
-    this.Matrikelnummer = Matrikelnummer;
+    this(Name, Geburtsjahr, Matrikelnummer, "unbekannt");
   }
 // Neu: Aufgabe 5.1 a)
   public Student_2 (String Name, int Geburtsjahr, int Matrikelnummer, String Fach)
   {
-    this(Name, Geburtsjahr, Matrikelnummer);
+    this.Name = Name;
+    this.Geburtsjahr = Geburtsjahr;
+    this.Matrikelnummer = Matrikelnummer;
     this.Fach = Fach;
+    getAnzahl();
   }
 
   public void studieren ()
@@ -52,6 +49,11 @@ public class Student_2
     System.out.println(Name + " schläft gerade");
   }
 
+  public void Count ()
+  {
+    System.out.println(countStudenten);
+  }
+
 // Neu: Aufgabe 5.2 b)
   public static int getAnzahl()
   {
@@ -60,6 +62,34 @@ public class Student_2
 // Neu Aufgabe 5.3. c)
   public genderType getType()
   {
-    return type;
+    return gender;
+  }
+
+  public void setgenderType (genderType gender)
+  {
+    this.gender = gender;
+  }
+// Neu Aufgabe 5.4 d)
+  public void isValid()
+  {
+    int [] ziffern = new int [10];
+    int matrikelNR = Matrikelnummer;
+    int i = 9;
+    int quersum = 0;
+    while (matrikelNR > 0)
+    {
+      ziffern[i] = matrikelNR % 10;
+      quersum += matrikelNR % 10;
+      matrikelNR = matrikelNR / 10;
+      i--;
+    }
+    if (quersum % 2 == 0)
+    {
+      System.out.print("valide.\n");
+    }
+    else
+    {
+      System.out.print("nicht valide.");
+    }
   }
 }
