@@ -1,5 +1,5 @@
 public class Segelflugzeug extends Flugzeug {
-    private int gewicht;
+    //private int gewicht;
 
     public Segelflugzeug() {
         System.out.println("konstruktor Segelflugzeug");
