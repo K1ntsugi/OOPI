@@ -2,6 +2,7 @@ public class Datum {
     // private Attribute der Klasse Datum
     // Zugriff nur innerhalb, nicht von außen, nicht von Unterklassen
     private int Tag, Monat, Jahr;
+
     /*
      * Getter-Methoden: Einzige (offizielle) Ausleseschnittstelle für die einzelnen
      * Attribute eine Datum-Objekts
@@ -12,6 +13,7 @@ public class Datum {
 
     public int getMonat() {
         return this.Monat;
+
     }
 
     public int getJahr() {
@@ -35,6 +37,7 @@ public class Datum {
     // vollständiger Konstruktor
     public Datum(int Tag, int Monat, int Jahr) {
         this.Tag = Tag;
+
         this.Monat = Monat;
         this.Jahr = Jahr;
     }
