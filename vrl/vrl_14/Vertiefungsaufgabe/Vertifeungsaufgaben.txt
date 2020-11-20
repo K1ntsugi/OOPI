@@ -1,0 +1,45 @@
+Aufgabe 1
+a) Erstellen Sie die Klasse Mensch mit den Attributen
+- Gewicht
+- Größe
+- Intelligenz
+Und den Methoden
+- Laufen
+- Schlafen
+- Jagen
+Erstellen Sie geeignete Konstruktoren mit 1, 2 und 3 Parametern.
+b) Erstellen Sie eine Klasse Erde und erzeugen Sie in der main Methode der
+Erde verschiedene Menschen
+c) Erstellen Sie eine Unterklasse von Mensch mit dem Namen Student.
+Erzeugen Sie folgende Konstruktoren
+- Student (gewicht)
+- Student (gewicht, größe, Intelligenz)
+- Student ()
+d) Fügen Sie ihrer Unterklasse eine redefinierte Version der Methoden laufen()
+und schlafen() hinzu. Rufen Sie aus der schlafen()-Methode der Unterklasse
+die schlafen() Methode der Oberklasse auf.
+e) Fügen Sie der Unterklasse eine Funktion studieren() hinzu.
+f) Erstellen Sie eine Methode ausgabe(), die die Gewichtsattribute der Unter- und
+Oberklasse ausgibt. In welcher Klasse müssen sie diese definieren?
+g) Erstellen Sie in ihrer Klasse Erde eine Funktion lauf(), die als
+Übergabeparameter einen Menschen erwartet und nur dessen Funktion
+Laufen ausführt
+h) Übergeben Sie der Funktion einen Menschen und einen Studenten
+i) Erstellen sie eine Unterklasse von Student mit dem Name Informatikstudent.
+Wählen Sie geeignete Konstruktoren. Die Intelligenz soll per default auf 200
+gesetzt werden. Es soll nicht mehr möglich sein, die Schlafen Funktion
+aufzurufen.
+j) Erstellen Sie einen Informatikstudenten und übergeben Sie ihm der Funktion
+lauf.
+
+
+Aufgabe 2 (enums)
+a) Erstellen Sie ein enum mit den Werten rechtshaender und linkshaender und
+geben Sie der Klasse Mensch ein entsprechendes Attribut.
+Definieren Sie das enum innerhalb der Klasse Mensch.
+b) Erstellen Sie hierfür einen getter und einen setter.
+c) Erstellen Sie in ihrer main Methode einen Menschen und setzen Sie ihn als
+Rechtshaender.
+d) Prüfen Sie über ihren getter, ob dieser Mensch wirklich ein Rechtshänder ist.
+e) Verschieben Sie die Definition des Enums in den Bereich außerhalb der
+Klasse. Kompilieren Sie. Was müssen Sie ändern?

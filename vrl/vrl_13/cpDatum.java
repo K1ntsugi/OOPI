@@ -13,6 +13,8 @@ public class cpDatum {
         binIchReal(heute, someday);
         Datum mirror = heute.clone();
         binIchReal(heute, mirror);
+        System.out.println(heute); // Weil println einen String erwartet und guess what -> "heute" wird automatisch mit der to String-Methode aufgerufen
+        // Beispiel für Polymorphismus
 
     }
 
