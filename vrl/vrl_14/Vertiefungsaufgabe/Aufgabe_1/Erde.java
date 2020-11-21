@@ -6,7 +6,7 @@ public class Erde {
         System.out.print("Alice ");
         Alice.Laufen();
         lauf(Max);
-
+        lauf(Mike);
     }
 
     public static void lauf(Mensch x)
