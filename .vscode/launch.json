@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - polyMain",
+            "request": "launch",
+            "mainClass": "polyMain",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - arrayVerschieben",
             "request": "launch",
             "mainClass": "arrayVerschieben",
