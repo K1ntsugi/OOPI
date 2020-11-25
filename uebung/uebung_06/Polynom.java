@@ -5,7 +5,7 @@ public class Polynom {
 
   public Polynom() {
     this(0, 0, 0, 0, 0, 0);
-  }
+  }  
 
   public Polynom(double a, double b, double c, double d, double e, double f) {
     koeff = new double[6];
@@ -70,7 +70,7 @@ public class Polynom {
 
   public double f (double x)
   {
-    double val = koeff[0] * x*x*x*x+x
+    double val = koeff[0] * x*x*x*x*x
                 +koeff[1] * x*x*x*x
                 +koeff[2] * x*x*x
                 +koeff[3] * x*x
