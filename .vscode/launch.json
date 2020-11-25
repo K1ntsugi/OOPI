@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - BauernhofMain",
+            "request": "launch",
+            "mainClass": "BauernhofMain",
+            "projectName": "OOPI_cbcb5c6b"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - polyMain",
             "request": "launch",
             "mainClass": "polyMain",
