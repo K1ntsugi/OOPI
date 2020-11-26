@@ -16,13 +16,14 @@ public class uclass_Student extends Mensch {
     }
 
     public void Laufen() {
-        System.out.println(" lauft nicht, weil er/sie studiert");
+        System.out.println(" laeuft nicht, weil er/sie studiert");
         ;
     }
 
     public void Schlafen() {
-        // System.out.println("Studenten schlafen nicht");;
+        
         super.Schlafen();
+        System.out.println("Studenten schlaeft");
     }
 
     public void Jagen() {

@@ -9,6 +9,20 @@
             "name": "CodeLens (Launch) - BauernhofMain",
             "request": "launch",
             "mainClass": "BauernhofMain",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BauernhofMain",
+            "request": "launch",
+            "mainClass": "aufgabe_2.BauernhofMain",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BauernhofMain",
+            "request": "launch",
+            "mainClass": "BauernhofMain",
             "projectName": "OOPI_cbcb5c6b"
         },
         {
