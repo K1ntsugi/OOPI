@@ -2,6 +2,19 @@ public class Mensch {
 
     protected float Größe = 0, Gewicht = 0;
     protected int Intelligenz = 0;
+    protected Haendigkeit Hand;
+
+    enum Haendigkeit {
+        rechtshänder, linkshänder
+    };
+
+    public Haendigkeit getHaendigkeit() {
+        return Hand;
+    }
+
+    public void setHaendigkeit(Haendigkeit h) {
+        Hand = h;
+    }
 
     public Mensch() {
         Gewicht = 80F;

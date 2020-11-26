@@ -10,6 +10,8 @@ public class Erde {
         lauf(Mike);
         lauf(Alice);
         lauf(Tobi);
+        Max.setHaendigkeit(Mensch.Haendigkeit.rechtshänder);
+        System.out.println("Max ist " + Max.getHaendigkeit());
     }
 
     public static void lauf(Mensch x)
