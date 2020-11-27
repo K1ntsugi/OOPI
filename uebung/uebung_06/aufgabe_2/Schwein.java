@@ -1,9 +1,13 @@
-public class Schwein {
+public class Schwein extends Tier{
 
-    String name = "Jeff";
+    public Schwein (String name)
+    {
+        super(name);
+    }
 
-    public String toString() {
-        return ("oink oink! " + name + "!");
+    public void ruf()
+    {
+        System.out.println("oink oink! " + name);
     }
 
 }

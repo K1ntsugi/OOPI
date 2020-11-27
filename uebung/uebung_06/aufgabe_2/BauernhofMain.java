@@ -12,17 +12,16 @@ public class BauernhofMain {
 
     public static void main(String[] args) {
 
-        Kuh Jack = new Kuh();
-        Katze Joe = new Katze();
-        Schwein Jeff = new Schwein();
 
-        rufen(Jack);
-        rufen(Joe);
+        Schwein Jeff = new Schwein("Jeff");
         rufen(Jeff);
+
+       
     }
 
-    public static void rufen(Object x) {
+    public static void rufen(Tier tier) {
         
+        tier.ruf();
 
     }
 }
