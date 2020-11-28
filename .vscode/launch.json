@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Zusatzaufgaben",
+            "request": "launch",
+            "mainClass": "Zusatzaufgaben",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BauernhofMain",
             "request": "launch",
             "mainClass": "BauernhofMain",
