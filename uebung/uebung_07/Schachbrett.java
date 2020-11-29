@@ -11,7 +11,7 @@ public class Schachbrett {
         int[][] schachbrett = new int[4][6];
 
         for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 6; i++) {
+            for (int j = 0; j < 6; j++) {
                 schachbrett[0][j] = j + 1;
                 schachbrett[1][j] = j + 2;
                 schachbrett[2][j] = j + 3;
@@ -20,8 +20,8 @@ public class Schachbrett {
         }
         // Ausgabe
         for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 6; i++) {
-                System.out.print(schachbrett[i][j]);
+            for (int j = 0; j < 6; j++) {
+                System.out.print(schachbrett[i][j] + " ");
             }
             System.out.println();
         }
