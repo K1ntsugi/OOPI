@@ -1,5 +1,3 @@
-import javax.management.monitor.StringMonitor;
-
 public class Tier {
    public String name;
 

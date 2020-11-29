@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Schachbrett",
+            "request": "launch",
+            "mainClass": "Schachbrett",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LoopsRevisited",
+            "request": "launch",
+            "mainClass": "LoopsRevisited",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Zusatzaufgaben",
             "request": "launch",
             "mainClass": "Zusatzaufgaben",
