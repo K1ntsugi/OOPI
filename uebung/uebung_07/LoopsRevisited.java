@@ -27,17 +27,16 @@ public class LoopsRevisited {
             System.out.println((double) (1 / (2 * i) + 1));
         }
         // for-Loop
-        for (i = 3; i < (2 * n); i++) {
+        for (i = 3; i < (2 * n);) {
+            i++;
             System.out.println((double) (1 / (2 * i) + 1));
         }
         // do-while-Loop
         do {
-            if (i < (2 * n)) {
+            if (n > 1) {
                 i++;
                 System.out.println((double) (1 / (2 * i) + 1));
-            } else {
-                System.out.println("");
-            }
+            } 
         } while (i < (2 * n));
 
         read.close();

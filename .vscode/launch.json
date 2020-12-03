@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Kontofuehrung5",
+            "request": "launch",
+            "mainClass": "Kontofuehrung5",
+            "projectName": "OOPI_f48a19da"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Schachbrett",
             "request": "launch",
             "mainClass": "Schachbrett",
