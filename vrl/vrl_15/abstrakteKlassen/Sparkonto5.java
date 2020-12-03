@@ -1,3 +1,5 @@
+package abstrakteKlassen;
+
 class Sparkonto5 extends Konto5
 {
     private float zinssatz;

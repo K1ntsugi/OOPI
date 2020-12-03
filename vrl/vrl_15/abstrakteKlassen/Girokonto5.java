@@ -1,3 +1,5 @@
+package abstrakteKlassen;
+
 class Girokonto5 extends Konto5
 {
     private int nummer;

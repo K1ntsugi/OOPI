@@ -1,3 +1,5 @@
+package abstrakteKlassen;
+
 abstract class Konto5
 {
     private int nummer;
