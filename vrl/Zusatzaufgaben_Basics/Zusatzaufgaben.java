@@ -7,6 +7,12 @@ public class Zusatzaufgaben {
         System.out.print("Das sind");
         System.out.println(" Zusatzaufgaben");
         // 3
-        int a = 17.0/2.0; 
+        double a = 17.0/2.0;
+        
+        MeineKlasse oop = new MeineKlasse();
+
+        oop.setSchwierigkeit("mittel");
+
+        String s = oop.getSchwierigkeit();
     }
 }

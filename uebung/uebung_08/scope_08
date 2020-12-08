@@ -1,0 +1,45 @@
+Objektorientiertes Programmieren
+
+Übungsblatt 8
+
+Aufgabe 1 – Abstrakte Klassen
+Erstellen Sie eine Klasse uebung_08.Drucker und zwei abgeleitete Klassen uebung_08.Laserdrucker und uebung_08.Tintendrucker. Es
+soll nicht möglich sein Objekte der Klasse uebung_08.Drucker zu erstellen. Fügen Sie eine Methode „print(String
+text)“ hinzu und ein Attribut „color“ vom Typ boolean.
+Erzeugen Sie in ihrer Main verschiedene uebung_08.Drucker und sammeln sie alle in einem Array. Lassen Sie alle
+uebung_08.Drucker den Text „Der Nikolaus war da!“ drucken.
+
+Aufgabe 2 – Interfaces
+Erzeugen Sie ein Interface „Scannen“, das die Methode scan() definiert. Erzeugen Sie eine Klasse
+MuFuDru, die sowohl ein uebung_08.Laserdrucker als auch ein Scanner ist.
+Erzeugen Sie zwei Arrays, eines vom Typ Scannen und eines vom Typ uebung_08.Drucker. Können Sie eine
+Instanz ihrer neuen MuFuDru Klasse darin speichern?
+Erzeugen Sie ein Array vom Typ TintenDrucker. Können Sie Ihre Instanz darin speichern?
+
+Aufgabe 3 – Interfaces und abstrakte Klassen
+Welcher Unterschied besteht in der Verwendung von abstrakten Klassen und Interfaces?
+
+Aufgabe 4 - Ausgaben
+Welche Ausgaben werden hier erzeugt? Versuchen Sie es zunächst ohne Compiler und verifizieren
+Sie Ihre Annahme anschließend mit dem Compiler.
+class Aufgabe4_1{
+ public String getInfo(){return "4_1";}
+}
+class Aufgabe4_2 extends Aufgabe4_1{
+ public String getInfo(){return "4_2";}
+}
+class Aufgabe4_3 extends Aufgabe4_2{
+ public String getInfo(){return "4_3";}
+}
+public class Aufgabe4 {
+ static String getInfo(Aufgabe4_1 o){return o.getInfo();}
+ public static void main(String [] args){
+ Aufgabe4_1 a1 = new Aufgabe4_3();
+ Aufgabe4_1 a2 = new Aufgabe4_2();
+ Aufgabe4_1 a3 = new Aufgabe4_1();
+ System.out.println(a3.getInfo());
+ System.out.println(getInfo(a3));
+ System.out.println(getInfo(a1));
+ System.out.println(a2.getInfo());
+ }
+}

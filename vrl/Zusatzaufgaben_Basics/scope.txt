@@ -15,18 +15,18 @@ Zusatzaufgaben B1
 den Getter und den Setter
 14.Welche Datentypen würden Sie verwenden, um folgende Informationen zu
 speichern?
-a. Alter einer Person
-b. Temperatur
-c. Körpergröße in cm
-d. Körpergröße in m
-e. Ein Name
-f. Ein Vor- und Nachname
-g. Eine Adresse
-h. Wochentagebezeichnungen
-i. 7-Tage Verlauf der Tagestemperatur
-j. Blutdruck
-k. 24 Stunden Verlauf des Blutdrucks (Messung jede Stunde)
-l. 24 Stunden Verlauf des Blutdrucks (Messung alle 20 min)
+a. Alter einer Person -> int
+b. Temperatur -> float/double
+c. Körpergröße in cm -> int
+d. Körpergröße in m -> float/double 
+e. Ein Name -> String
+f. Ein Vor- und Nachname -> String Array
+g. Eine Adresse -> String/Klasse
+h. Wochentagebezeichnungen -> enum
+i. 7-Tage Verlauf der Tagestemperatur -> int oder float Array
+j. Blutdruck -> int[]
+k. 24 Stunden Verlauf des Blutdrucks (Messung jede Stunde) -> int [][]
+l. 24 Stunden Verlauf des Blutdrucks (Messung alle 20 min) -> int [72][2]
 m.
 15.Erzeugen Sie in ihrer Klasse ein int Array mit 5 Elementen. Weisen Sie den
 Speicher im Konstruktor zu.

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/OOPI.iml" filepath="$PROJECT_DIR$/.idea/OOPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uebung/uebung.iml" filepath="$PROJECT_DIR$/uebung/uebung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uebung/uebung_05/uebung_05.iml" filepath="$PROJECT_DIR$/uebung/uebung_05/uebung_05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uebung/uebung_06/uebung_06.iml" filepath="$PROJECT_DIR$/uebung/uebung_06/uebung_06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vrl/vrl.iml" filepath="$PROJECT_DIR$/vrl/vrl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vrl/vrl_08/vrl_08.iml" filepath="$PROJECT_DIR$/vrl/vrl_08/vrl_08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vrl/vrl_10/vrl_10.iml" filepath="$PROJECT_DIR$/vrl/vrl_10/vrl_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vrl/vrl_11/vrl_11.iml" filepath="$PROJECT_DIR$/vrl/vrl_11/vrl_11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vrl/vrl_14/vrl_14.iml" filepath="$PROJECT_DIR$/vrl/vrl_14/vrl_14.iml" />
+    </modules>
+  </component>
+</project>
