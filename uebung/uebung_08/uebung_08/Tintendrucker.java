@@ -1,10 +1,9 @@
 package uebung_08;
 
-public class Tintendrucker extends Drucker{
+public class Tintendrucker extends Drucker {
 
-    public Tintendrucker (boolean color)
-    {
-        super(color);
+    public Tintendrucker(boolean color) {
+        super();
     }
 
     @Override

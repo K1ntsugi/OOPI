@@ -14,5 +14,18 @@ public class TestDruck {
             drucker.print(s);
 
         }
+
+        MuFuDru mufu = new MuFuDru(true);
+
+        Scannen[] scanner = new Scannen[5];
+        scanner[0] = mufu; // ok
+
+        Drucker[] drucker = new Drucker[5];
+        drucker[0] = mufu; // ok
+
+        Tintendrucker[] tintis = new Tintendrucker[5];
+        tintis[0] = mufu; // Geht nicht
+
+
     }
 }
