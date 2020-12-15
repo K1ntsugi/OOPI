@@ -23,9 +23,9 @@ public class TestDruck {
         Drucker[] drucker = new Drucker[5];
         drucker[0] = mufu; // ok
 
-        Tintendrucker[] tintis = new Tintendrucker[5];
+        /*Tintendrucker[] tintis = new Tintendrucker[5];
         tintis[0] = mufu; // Geht nicht
-
+        */
 
     }
 }

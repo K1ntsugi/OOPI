@@ -10,6 +10,8 @@
       <sourceFolder url="file://$MODULE_DIR$/vrl_12" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vrl_13" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vrl_15" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Wissenskontrolle" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vrl_16" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
