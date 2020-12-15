@@ -12,6 +12,8 @@ Element „erweitert“ werden und der neue Teiler eingefügt werden.
 
 package Teiler;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class TeilerVon {
@@ -20,15 +22,40 @@ public class TeilerVon {
         System.out.print("Ganzzahlige Teiler herausfinden. Zahl eingeben: ");
         int n = read.nextInt();
         teilerVon(n);
+        System.out.println();
+        teilerArrayVon(n);
 
     }
 
     public static void teilerVon(int zahl) {
         for (int i = 1; i < zahl; i++) {
-            if (zahl % i == 0)
-            {
-                System.out.println(i);
+            if (zahl % i == 0) {
+                System.out.print(i + " ");
             }
         }
+    }
+
+    public static int @NotNull [] teilerArrayVon(int zahl) {
+        int[] array = new int[0]; // bisher null Teiler
+        for (int i = 1; i < zahl; i++) {
+            if (zahl % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+
+        for (int k : array) {
+            System.out.print(k + " ");
+        }
+        System.out.println();
+        return array;
+    }
+
+    public static int[] arrayErweitern(int[] oldArray, int n) {
+        int[] newArray = new int[oldArray.length + 1];
+        for (int i = 0; i < oldArray.length; i++) {
+            newArray[i] = oldArray[i];
+        }
+        newArray[newArray.length - 1] = n;
+        return newArray;
     }
 }
