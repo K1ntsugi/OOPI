@@ -59,4 +59,19 @@ public class MeineKlasse {
             array[i] = (int) Math.pow(-1, i) * (i + 1);
         }
     }
+
+    public void recursiveArray(int[] arr, int i) {
+        i--;
+        if (i < 0) // Basis-Fall: Hier terminiert das Programm -> Also wenn unser array index out of bounds ist
+        {
+            System.out.println("Rekursion terminiert");
+            System.exit(0);
+        } else {
+            if (arr[i] <= arr[arr.length - 1]) {
+
+                System.out.print(i+1 + " ");
+            }
+            recursiveArray(arr, i);
+        }
+    }
 }
