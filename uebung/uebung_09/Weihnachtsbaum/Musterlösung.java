@@ -7,10 +7,10 @@ public class Musterlösung {
         Scanner read = new Scanner(System.in);
         System.out.print("Bitte Hoehe eingeben: ");
         int n = read.nextInt();
-        drwaTree(n);
+        drawTree(n);
     }
 
-    public static void drwaTree(int n) {
+    public static void drawTree(int n) {
         String zeile;
         for (int i = 0; i < n; i++) {
             zeile = makeChars(n - i - 1, ' ') + makeChars(2 * i + 1, '*');

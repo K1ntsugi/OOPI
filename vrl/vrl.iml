@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/vrl_15" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Wissenskontrolle" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vrl_16" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vrl_17" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

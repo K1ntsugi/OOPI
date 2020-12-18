@@ -49,9 +49,14 @@ public class MeineKlasse {
     }
 
     public void fillArrayD(int[] n) {
-        for (int i = array.length-1; i == 0; i--)
-        {
-            array[i] = i+1;
+        for (int i = array.length - 1; i == 0; i--) {
+            array[i] = i + 1;
+        }
+    }
+
+    public void fillArrayE(int[] n) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) Math.pow(-1, i) * (i + 1);
         }
     }
 }
