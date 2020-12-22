@@ -68,8 +68,7 @@ public class MeineKlasse {
             System.exit(0);
         } else {
             if (arr[i] <= arr[arr.length - 1]) {
-
-                System.out.print(i+1 + " ");
+                System.out.print(i + 1 + " ");
             }
             recursiveArray(arr, i);
         }
