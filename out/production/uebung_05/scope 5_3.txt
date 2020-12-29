@@ -1,0 +1,4 @@
+Aufgabe 5.3 Optional
+Schreiben Sie ein Programm, das für eine Woche jeweils die
+Tageshöchsttemperatur einliest (also 7 Temperaturwerte) und die mittlere
+Tageshöchsttemperatur sowie die Wochenhöchsttemperatur ausgibt.

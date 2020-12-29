@@ -1,3 +1,5 @@
+package zusatzaufgaben.B1;
+
 public class Zusatzaufgaben {
     public static void main(String[] args) {
         int[] array = new int[10];

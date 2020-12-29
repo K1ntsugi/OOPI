@@ -1,0 +1,252 @@
+Wissenskontrolle 1
+
+
+Fragen:
+1. Wozu braucht man einen Compiler?
+    -> Um Quelltext in eine binär-codierte für die CPU ausführbare Datei umzuwandeln.
+
+2. Was ist ein Interpreter?
+    -> Ist ein Programm, welches einen gegebenen Quelltext zur Laufzeit analysiert und anschließend
+       kompiliert. Wichtig ist, dass im Unterschied zum Compiler nicht der gesamte Quelltext übersetzt
+       und als ausführbare Datei ausgegeben wird.
+
+3. Wie wird Quellcode in Java übersetzt? Mit welchem Befehl?
+    -> Befehl: javac <dateiname>.java
+    -> Quellcode wird zunächst in Bytecode übersetzt.
+
+4. Wie sind Quelldateien in Java aufgebaut?
+    -> datei.java (Quellcode)
+    -> datei.class (Bytecode)
+    -> Quelldatei selbst:
+        - Klassennamen (public) der gleichlautend ist mit dem Dateinamen
+        - Main Funktion
+
+5. Wie muss der Dateiname lauten?
+    -> <dateiname>.java
+    -> bzw. Gleichlautend zur Klasse der Main-Funktion
+
+6. Was ist die main-Methode?
+    -> Einstig in das Programm
+
+7. Warum ist die main static?
+    -> Weil sie nicht an ein Objekt gebunden ist.
+
+8. Dürften Sie auch zwei main-Funktionen definieren?
+    -> Nein
+
+9. Was bedeuten die Übergabeparameter in main?
+    -> Einlesen über die Konsole bei Programmaufruf
+    -> Bsp.: <mainKlasse>.java grün, gelb, rot
+
+10. Wie kann ich eine Ausgabe erzeugen?
+    -> System.out.println("Ausgabe");
+
+11. Welche Möglichkeiten gibt es, Kommentare zu erzeugen?
+    a. Ist das erlaubt? /* /** bin ich noch ein Kommentar? **/ */
+    -> ja
+    b. Ist das erlaubt? ////// sicher ist sicher
+    -> ja
+
+12. Was ist der Unterschied zwischen einer Variablen und einer Konstanten?
+    -> Variable besitz änderbaren Wert
+    -> Konstante ist final
+    a. Nennen Sie Beispiele
+    Variable: int a = 1;
+    Konstante: final int a = 2;
+
+13. Wie setzen Sie eigene Konstanten um?
+    -> siehe oben
+    -> keyword: final
+
+14. Wie lesen Sie eine ganze Zahl von der Kommandozeile ein?
+    int a = 0;
+    Scanner read = new Scanner (System.in);
+    a = read.nextInt();
+
+15. Wie lesen Sie drei ganze Zahlen von der Kommandozeile ein? Brauchen Sie dafür einen neuen Scanner?
+    -> Nein. Ich benötige dafür nur drei Variablen.
+
+16. Wie lesen Sie 100 ganze Zahlen von der Kommandozeile ein?
+       int [] a = new int [100];
+       Scanner read = new Scanner (System.in);
+       for(int i = 0; i < a.length; i++)
+       {
+            System.out.print(Bitte Zahl eingeben);
+            a[i] = read.nexInt();
+       }
+
+17. Wie lesen Sie eine Gleitkommazahl von der Kommandozeile ein?
+    float f = 0;
+    Scanner read = new Scanner (System.in);
+    f = read.nextFloat();
+
+18. Welche Regeln gelten für die Wahl von Bezeichnern?
+    -> Keine Keywords
+    -> nicht mit Zahl beginnen
+    -> keine Sonderzeichen
+    // Anmerkung: $ funktioniert bei mir
+
+19. Sind folgende unabhängige Anweisungen zulässig? Wenn nein, warum?
+    a. double d = 5; -> ja
+    b. float f = 5; -> ja
+    c. int a, b, c = 5; -> ja
+    d. int a,b,c; a=b=c=5; -> nein: nur c=5 wird zugewiesen
+    e. int a=3, b=a; -> nein: b nicht als eigene Variable definiert
+    f. String s = „jipie“; -> ja (Wenn man von den Anführungszeichen absieht)
+    g. String[] s = „jipiiie“ ; nein: geschweifte Klammern für Direktinitialisierung nicht gegeben
+    h. String[] s = new String[1]; s[0] = „jipie“; -> ja
+    i. int a; int b = a; -> nein, da a nicht mit erstwert definiert
+    j. int a = 3, b=3; ++a; b++; -> ja
+    k. int a = 3, b=3; int c = (a/b)++; -> nein, postdekrement weiß nicht auf welchen Wert es sich bezieht
+
+20. Richtig oder falsch?
+    a. Jede Variable muss vor ihrer Benutzung deklariert werden.
+    -> ja
+    b. Jeder Variable muss ein Wert zugewiesen werden, bevor man sie lesen kann.
+    -> ja
+    c. Jeder Variable muss ein Wert zugewiesen werden, bevor man sie beschreiben kann.
+    -> nein, ich kann eine Variable erst deklarieren und später im Quellcode beschreiben
+    d. Initialisierung bedeutet Wertzuweisung am Anfang einer Funktion.
+    -> nein, nur Datentyp und Name werden in der Initialisierung zugewiesen
+
+21. Welche Ausgabe wird erzeugt?
+    a. System.out.println(„1/10 = “ + 1/10);
+    -> 1/10 = 0
+    b. System.out.println(„1/10 = “ + 1.0/10);
+    -> 1/10 = 0.1
+    c. System.out.println(„1/10 = “ + 1.0/10.0);
+    -> 1/10 = 0.1
+    d. System.out.println(„1/10 = “ + „1/10“);
+    -> 1/10 = 1/10
+    e. System.out.println(„1/10 = “ + 1.0/10);
+    -> 1/10 = 0.1 (b == e ??? Warum zweimal ???)
+    f. System.out.println(3/2 + 2.5F);
+    -> 3.5
+    g. System.out.println((float)3/2 + 2.5F);
+    -> 4.0
+    h. System.out.println((float) 3/ (float) 2 + 2.5F);
+    -> 4.0
+    i. System.out.println((float)(3/2) + 2.5F);
+    -> 3.5 weil der Typecast erst am Ende der Berechnung wirkt
+    j. for (int i= (int) 1.23 ; i< (int) 2.99; i++) System.out.println(i);
+    -> 1
+    k. int a = 3, b=2; System.out.println(++a / b-- + a/b );
+    -> (NR: 4/2 + 4/1 = 6) 6
+
+22. Was ist ein Escape Zeichen?
+    -> Ein Zeichen zur Formatierung auf der Konsole, hinterlegt in der ASCII Tabelle
+    -> Bspw. "\n" -> new line
+    -> "\a" -> Bell
+
+23. Wie erzeugen Sie einen Backslash auf der Konsole?
+    System.out.print("\\");
+
+24. Was ist der Unterschied zwischen impliziter und expliziter Typumwandlung?
+    -> implizit: Änderung von Datentyp durch . bsp 1 => 1.0 wird als float behandelt
+    -> explizit (typ) <variable>
+
+25. Sind fa. if ((a<=b) && (b<=a)) if(a==b)folgende Bedingungen gleich? -> ja
+    b. if((a<b) || (b<a)) if(a !=b) -> ja
+    c. if((a<b) || (b<a)) if(!(a==b)) -> ja
+    d. if(!(a==b)) if((a!=b)) -> ja
+
+26. Warum ist folgendes wahr?
+    a. String s = “huhu”; if(s == “huhu”) … -> Weil wir es so definiert haben
+    b. Warum ist kein equals notwendig? -> Weil wir keine zwei Strings/Objekte vergleichen
+    c. Gilt hier auch s1==s2? String s1 = “huhu”, s2 = “huhu“; -> mit s1==s2 vergleichen wir nur Referenzen, hier wird die
+        equals-Methode benötigt: s1.equals(s2);
+
+27. Was bedeutet x = (x >= 0) ? +1 : -1;
+    -> Wenn x >= 0 {x=1} else {x=-1};
+---------------------------------------------------------------------------------------
+28. Schreiben Sie folgende Anweisungen als eine, indem Sie den ternären
+    Operator verwenden: falls y > 0 und y<10 ist soll x = true sein, sonst false
+
+29. Wie viele Durchläufe hat folgende Schleife
+    a. for(int x=0; x<10; x++)
+    b. for(int x=0; x<10; ++x)
+    c. for(int x=10; x<10; x--)
+    d. for(int x=5; x<5; x++)
+    e. do {...} while (false)
+    f. formulieren sie für a-e entsprechende while – Schleifen
+    g. erzeugen Sie eine endlose schleife mit for und while
+
+30. Was ist der Unterschied zwischen break und continue? Geben sie jeweils ein
+Beispiel
+
+31. Was ist der Unterschied zwischen Funktionsdefinition und Funktionsaufruf?
+
+32. Was ist ein Argument? Was ein Parameter?
+
+33. Muss ein Funktionsargument den gleichen Namen haben wie der
+Funktionsparameter?
+
+34. Sie wollen in einer Funktion mitzählen, wie oft diese aufgerufen wurde. Wie
+realisieren sie dies?
+35. Was ist call by value und was ist call-by-reference?
+a. Wann gilt in java welche Form?
+36. Wie würde Sie eine einzelne integer Variable by reference übergeben?
+37. Wie sehen Parameter und Argument zur Übergabe eines int-Feldes aus?
+a. Wie seht die Rückgabe eines solchen Feldes aus?
+38. Wie sieht die Übergabe eines zweidimensionalen String arrays aus?
+39. Was ist der Unterschied zwischen einer flachen und einer tiefen Kopie?
+40. Sie haben eine Funktion, der ein zweidimensionales String-array übergeben
+wird. Wie können Sie die erste Zeile zurückgeben? Wie können Sie eine
+Kopie der ersten Zeile zurückgeben?
+41. Wie können Sie ein array arr aus MyObject – Objekten mit for-each
+durchlaufen?
+42. Worin liegt der wesentliche Unterschied zwischen for-each und for(...)
+43. Wie rufen Sie einen Konstruktor im Konstruktor auf? Und warum sollten Sie
+das überhaupt wollen?
+44. Wie rufen Sie einen Konstruktor der Oberklasse auf?
+45. Welcher syntaktische Unterschied besteht zwischen Konstruktor und einer
+gewöhnlichen Methode?
+46. Können Sie innerhalb eines Konstruktors eine Objektmethode aufrufen?
+47. Können Sie in einer Objektmethode einen Konstruktor aufrufen?
+48. Erklären Sie folgende Begriffe:
+a. Klasse
+b. Objekt
+c. Object
+d. Instanz
+e. Initialisierung
+f. Konstruktor
+g. Desktruktor
+h. Garbage Collector
+i. Vererbung
+j. Polymorphismus
+49. Wie können Sie eine double-Variable bei der Ausgabe auf 3
+Nachkommastellen beschränken?
+50. Wie können Sie eine Ausgabe links- oder rechtsbündig gestalten?
+51. Was ist eine rekursive Funktion?
+52. Richtig oder falsch? Wenn falsch, dann verbessern:
+a. Eine statische Methode kann ohne Objekt aufgerufen werden
+b. Eine statische Methode kann außerhalb einer Klasse definiert werden
+c. Eine statische Methode hat keinen Rückgabewert
+d. Statische Methoden können nicht vererbt werden
+e. Statische Methoden können nur auf statischen Attributen arbeiten
+f. Eine Klasse kann mehrere statische Methoden haben
+g. Eine Objektmethode kann eine statische Methode aufrufen
+53. Entwerfen Sie je ein Beispiel für folgende Relationen
+a. Is
+b. Has
+c. Uses
+54. Entwerfen Sie ein Beispiel für Polymorphismus in einem Array
+55. Was bewirkt das final-Schlüsselwort bei
+a. Einer Variablen
+b. Einer Klasse
+c. Einer Methode
+56. Sichtbarkeit
+a. Was bedeutet public?
+b. Was ist die Standard-Sichtbarkeit? Wie ist diese definiert?
+c. Was passiert, wenn man die main Methode private setzt?
+d. Was passiert, wenn man die Klasse mit der main-Methode private
+setzt?
+57. Warum müssen in einem Interface nicht mehr alle Methoden als public und
+abstract gekennzeichnet werden?
+58. Was ist bei Operatoren mit Assoziativität und Priorität gemeint?
+59. Was sind unäre, binäre und ternäre Operatoren? Geben Sie je ein Beispiel
+60. Richtig oder falsch?
+a. Eine abstrakte Klasse darf nicht final sein
+b. Eine abstrakte Klasse darf keine final – Methoden haben
+c. Sie dürfen die Attribute einer final-Klasse nicht mehr ändern, wenn
+diese einmal zugwiesen sind

@@ -1,0 +1,21 @@
+Erstellen Sie eine Klasse Polynom, die Polynome bis zum Grad 5 speichern kann.
+Die Koeffizienten sollen den Konstruktoren übergeben werden. Die Klasse soll
+folgende Funktionen besitzen
+a) String nullstellen(): Für alle Polynome bis einschließlich Grad 2 soll diese
+Funktion die Nullstellen in einem String ausgeben. Denken Sie an
+Randbedingungen und Null-Koeffizienten. Bei höheren Graden soll eine
+Meldung erscheinen, dass das zu kompliziert ist.
+b) Polynom add(Polynom rhs): Diese Funktion soll zum gegebenen Polynom das
+Polynom rhs addieren und die Summe beider Polynome zurückgeben
+c) getKoeffizient(int stelle): liefert den Koeffizienten an Stelle stelle zurück
+d) f(double x): liefert den Wert an Stelle x zurück.
+Schreiben Sie eine main-Methode, in der Sie verschiedene Polynome erzeugen und
+die o.g. Funktionen testen.
+Erstellen Sie ein Array x mit den Werten von -100 bis 100 in 1er Schritten.
+Durchlaufen Sie das Array und berechnen Sie für alle Werte f(x) des Polynoms
+0.5x2
+-13x+2
+und speichern Sie diese in einem weiteren Array y.
+Erzeugen Sie eine Ausgabe für die Arrays x und y für alle Werte in der Form:
+100: 0.5 * 100 * 100 – 13 * 100 + 2 = 3702
+ 99: 0.5 * 99 * 99 – 13 * 99 +2 = ...

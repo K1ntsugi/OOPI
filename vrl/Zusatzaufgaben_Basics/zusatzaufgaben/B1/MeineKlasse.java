@@ -1,3 +1,5 @@
+package zusatzaufgaben.B1;
+
 public class MeineKlasse {
     private String schwierigkeit;
     private int[] array;

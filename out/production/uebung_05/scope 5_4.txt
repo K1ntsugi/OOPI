@@ -1,0 +1,6 @@
+Aufgabe 5.4 Optional
+a) Schreiben Sie eine Funktion, welche die Elemente eines übergebenen intArrays um eins nach rechts schiebt. Das letzte Element kommt dann auf
+Position 0.
+b) Testen Sie Ihre Funktion mit einer geeigneten main()-Funktion, in der Sie ein
+beliebiges int-Array anlegen, damit die Funktion aufrufen und danach das
+verschobene Array

@@ -1,0 +1,135 @@
+Zusatzaufgaben B2
+1. Erstellen Sie eine Funktion, die den Text „voll automatisch!“ auf der Konsole
+ausgibt.
+
+2. Erstellen Sie eine for-Schleife, die 10 x den Buchstaben A ausgibt.
+
+3. Erstellen Sie eine Funktion, der sie den Wert n übergeben. Die Funktion soll n
+Mal den Buchstaben A ausgeben
+
+4. Erstellen Sie folgende Ausgabereihen mit jeweils einer for und einer while
+Schleife
+    a. 0,1,2,3,4,5,6
+    b. 1,2,3,4,5,6,
+    c. 1,3,5,7,9,11
+    d. 1,3,6,10,15,21,28,36 (+2,+3,+4,...)
+    e. 10,9,8,7,6,5,4
+    f. 10,8,6,4,2,0
+
+5. Erstellen Sie eine Funktion, die das Doppelte einer übergebenen Zahl
+zurückgibt.
+
+6. Erstellen Sie eine Funktion, die true zurückgibt, wenn eine übergebene Zahl
+zwischen 0 und 100 liegt.
+
+7. Erstellen Sie eine Funktion, die true zurückgibt, wenn die übergebene Zahl
+zwischen 0 und 100 liegt oder wenn die übergebene Zahl durch 20 teilbar ist.
+
+8. Erstellen Sie eine Funktion, die die Fläche eines Rechtecks zurückgibt.
+Übergabeparameter sind die Länge und die Breite.
+Werfen Sie eine Exception, wenn eines der Argumente negativ ist.
+
+9. Erstellen Sie eine Funktion, die die Summe zweier/dreier Zahlen zurückgibt.
+Überladen Sie die Funktion für float.
+
+10.Erstellen Sie eine Funktion, die zurückgibt, ob eine Zahl gerade oder
+ungerade ist.
+
+11.Erstellen Sie ein while-schleife, die in jedem Durchgang den Benutzer nach
+einer Zahl fragt bis dieser 0 eingibt. Anschließend soll die Summe aller
+eingaben ausgegeben werden.
+
+12.Erstellen Sie eine Funktion, die die Fläche eines Kreises zurückgibt.
+Übergabeparameter ist der Radius. Definieren Sie Pi als Konstante. Prüfen sie
+auf ungültige Übergabeparameter. Werfen Sie bei ungültigen Parametern eine
+Exception.
+
+13.Erstellen Sie eine Funktion, die ein beliebig langes Int Array entgegennimmt
+und zum ersten Element 1 hinzuaddiert, zum zweiten Element 2 addiert, ...
+
+14.Erstellen Sie eine Funktion, die ein beliebig langes Int Array entgegennimmt
+und einen einzelnen Int-Wert. Die Funktion solle alle Werte des Arrays durch
+diesen Int Wert ersetzen.
+
+15.Erstellen Sie eine Funktion, die ein beliebig langes Int Array entgegennimmt
+und einen einzelnen Int-Wert. Die Funktion solle alle Werte des Arrays mit
+diesem Int-Wert multiplizieren.
+
+16.Erstellen Sie eine getValue(int[] array, int index).
+
+17.Erstellen Sie eine setValue(int[] array, int index, int value).
+
+18.Erstellen Sie eine Funktion, die den Index mit dem kleinsten Wert eines
+beliebigen Arrays zurückgibt int getMinIndex(int[] array)
+
+19.Erstellen Sie ein Programm „Einkaufen“. Das Programm soll immer wieder
+nachfragen, ob der Benutzer einen weiteren Preis eingebe will bis dieser nein
+eingibt. Anschließend soll das Programm alle Preise untereinander ausgeben,
+zusammenzählen und anschließend 16% MwSt. ausweisen. Gehen Sie davon
+aus, dass max 10 Preise eingegeben werden.
+
+20.Erstellen Sie ein Programm, das Zahlen von der Konsole einliest, sie in ein
+Array speichert und das Array anschließend in gleicher bzw. in umgekehrter
+Reihenfolge ausgibt.
+
+21.Optional: Erstellen Sie eine Funktion, die ein gegebenes Array aus Integern
+möglichst „fair“ teilt, d.h. den Index ausgibt.
+
+22. Rekursion: Implementieren Sie den Euklidischen Algorithmus rekursiv.
+Verwenden Sie außer Rekursion nur if-else, Vergleiche und Subtraktion
+Der Euklidische Algorithmus zur Berechnung des größten gemeinsamen
+Teilers zweier positiver ganzer Zahlen a und b (ggt(a,b)) ist wie folgt rekursiv
+definiert:
+ggt(a,b) := a, falls a = b gilt
+ggt(a,b) := ggt(a - b, b), falls a > b gilt
+ggt(a,b) := ggt(a, b - a), falls b > a gilt
+
+23.Der Igel möchte in einem Wettlauf gegen den Hasen antreten. Naturgemäß
+hat der Igel eine kürzere Schrittlänge als der Hase: der Igel hat eine
+Schrittlänge von 5.3 cm, der Hase hat eine Schrittlänge von 10.8 cm. Um
+diesen Vorteil des Hasen auszugleichen, bekommt der Igel einen Vorsprung
+von 270 cm. Schreiben Sie eine main-Methode, die berechnet, nach wie
+vielen Schritten der Hase den Igel trotz des Vorsprungs überholt hat. Ihr
+Programm soll für jeden Schritt in einer neuen Zeile ausgeben,
+a. (1) wie weit der Hase insgesamt vorwärts gekommen ist und
+b. (2) wie weit der Igel zuzüglich seines Vorsprungs vorwärts gekommen
+ist. Diese Ausgabe soll letztmals erfolgen, wenn der Hase den Igel
+überholt hat.
+Für die obigen Werte soll folgender Text auf der Kommandozeile ausgegeben
+werden:
+Nach 1 Schritten: Hase 10.8cm, Igel 275.3cm
+Nach 2 Schritten: Hase 21.6cm, Igel 280.6cm
+Nach 3 Schritten: Hase 32.4cm, Igel 285.9cm ...
+Nach 50 Schritten: Hase 540.0cm, Igel 535.0cm
+
+24.Eine Wetterstation misst jeden Tag um die gleiche Uhrzeit die Temperatur.
+Diese Daten werden der Reihe nach in einem Array vom Typ double
+gespeichert. Schreiben Sie eine Methode mit folgendem Kopf:
+public static double groessterTemperaturSprung(double[] array)
+Die Methode soll den größten Temperatursprung zwischen zwei aufeinander
+folgenden Tagen berechnen. Beispielweise soll für das Array [ −5.0, 1.7, 19.0,
+16.9] der Wert 17.3 ausgegeben werden und für das Array [13.3, 12.0, 12.5]
+der Wert 1.3. Es kann davon ausgegangen werden, dass das Array
+mindestens zwei Elemente enthält. Hinweis: Mit Hilfe der Methode Math.abs
+können Sie den Absolutbetrag einer Zahl berechnen. Beispielsweise ergibt
+Math.abs(-1.3) den Wert 1.3.
+
+25.Objektorientierung: Implementieren Sie die Klasse Flugzeug. Ein Flugzeug hat
+einen Namen, einen Captain (boolean), und eine bestimmte Anzahl an
+Passagieren. Implementieren Sie: einen Konstruktor mit Namen. Eine
+Funktion Captainzusteigen und Captainaussteigen. Implementieren Sie die
+Funktion fliegen. Wird diese ohn Captain an Board aufgerufen, soll eine
+exception geworfen werden. Ansonsten soll ausgegeben werden, dass das
+Flugzeug abgehoben hat. Erstellen Sie eine toString() Methode, die einen
+String zurückgibt und Auskunft über den aktuellen Zustand gibt.
+26.Objektorientierung/Vererbung: Sie sollen verschiedene Schiffe mit Hilfe von
+Klassen modellieren. Alle Schiffe haben immer die Eigenschaft Tonnage (int),
+Länge (double) und einen Namen, sowie die Funktion anlegen und ablegen
+(einfaches System.out reicht). Leiten Sie von dieser Klasse die Klasse
+Segelschiff ab, die zusätzlich die Eigenschaft Segelfläche besitzt und die
+Funktion Segel-setzen. Leiten Sie außerdem die Klasse Motorschiff ab, die
+die Eigenschaft Motorleistung hat und die Methode tanken.
+Erstellen Sie eine Klasse Hafen, die verschiedene Schiffe verwalten kann,
+indem sie die Methoden anlegenLassen(...) und ablegenLassen(...) anbietet.
+Es soll zusätzlich eine Methode geben, die eine Übersicht, über die derzeit
+angelegten Schiffe gibt
