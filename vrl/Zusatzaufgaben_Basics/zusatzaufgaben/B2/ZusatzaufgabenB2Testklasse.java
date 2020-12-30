@@ -1,17 +1,19 @@
+//Enthält Aufgaben 1-18
 package zusatzaufgaben.B2;
 
 import java.util.Scanner;
 
 public class ZusatzaufgabenB2Testklasse {
     public static final double Pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;
-    private int [] array = {3,5,7,9,11};
-    private final int index;
+    private int[] array = {3, 5, 7, 9, 11};
 
-    public getValue (int[] array, int index)
-    {
-        this.array = array;
-        this.index = index;
-        return ;
+    public void getValue(int[] array, int index) {
+        System.out.println(array[index]);
+    }
+
+    public int[] serValue(int[] array, int index, int value) {
+        array[index] = value;
+        return array;
     }
 
     public static void main(String[] args) throws Exception {
@@ -71,7 +73,10 @@ public class ZusatzaufgabenB2Testklasse {
         arr15 = aufgabe15(arr15, 4);
         System.out.println("\nNeues Array (multipliziert mit n):");
         outputArr(arr15);
-
+        // ToDo: Test Aufgabe  16 - 18
+        System.out.print("\n" + "Aufgabe 18: ");
+        ReverseArray arrObj = new ReverseArray();
+        arrObj.aufgabe20();
 
     }
 
@@ -93,15 +98,14 @@ public class ZusatzaufgabenB2Testklasse {
 
     public static void aufgabe2() {
         char A = 'A';
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.print(A + " ");
         }
     }
 
     public static void aufgabe3(int n) {
-        char A = 'A';
-        for (int i = 0; i <= n; i++) {
-            System.out.print(A + " ");
+        for (int i = 0; i < n; i++) {
+            System.out.print("A" + " ");
         }
     }
 
@@ -138,6 +142,7 @@ public class ZusatzaufgabenB2Testklasse {
             System.out.print(c + " ");
             c += 2;
         }
+        //d. 1,3,6,10,15,21,28,36 (+2,+3,+4,...)
         System.out.println("\nReihe d (for): ");
         int j = 2;
         for (int i = 1; i < 37; i = i + j - 1) {
@@ -226,7 +231,6 @@ public class ZusatzaufgabenB2Testklasse {
     public static double aufgabe12(int r) throws Exception {
         //Kreisfläche: 2*r*Pi
         double A = 0;
-        ZusatzaufgabenB2Testklasse kreis = new ZusatzaufgabenB2Testklasse();
         try {
             if (r > 0) {
                 A = 2 * r * Pi;
@@ -261,5 +265,16 @@ public class ZusatzaufgabenB2Testklasse {
         return arr;
     }
 
+    // Aufgabe 16 & 17 als Getter/Setter über der Main
 
+    // Aufgabe 18
+    public static int getMinIndex(int[] array) {
+        int minIndex = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < minIndex) {
+                minIndex = array[i];
+            }
+        }
+        return minIndex;
+    }
 }

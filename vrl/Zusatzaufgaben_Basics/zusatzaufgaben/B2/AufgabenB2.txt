@@ -105,7 +105,7 @@ Nach 50 Schritten: Hase 540.0cm, Igel 535.0cm
 24.Eine Wetterstation misst jeden Tag um die gleiche Uhrzeit die Temperatur.
 Diese Daten werden der Reihe nach in einem Array vom Typ double
 gespeichert. Schreiben Sie eine Methode mit folgendem Kopf:
-public static double groessterTemperaturSprung(double[] array)
+public static double groesster TemperaturSprung(double[] array)
 Die Methode soll den größten Temperatursprung zwischen zwei aufeinander
 folgenden Tagen berechnen. Beispielweise soll für das Array [ −5.0, 1.7, 19.0,
 16.9] der Wert 17.3 ausgegeben werden und für das Array [13.3, 12.0, 12.5]
@@ -122,6 +122,7 @@ Funktion fliegen. Wird diese ohn Captain an Board aufgerufen, soll eine
 exception geworfen werden. Ansonsten soll ausgegeben werden, dass das
 Flugzeug abgehoben hat. Erstellen Sie eine toString() Methode, die einen
 String zurückgibt und Auskunft über den aktuellen Zustand gibt.
+
 26.Objektorientierung/Vererbung: Sie sollen verschiedene Schiffe mit Hilfe von
 Klassen modellieren. Alle Schiffe haben immer die Eigenschaft Tonnage (int),
 Länge (double) und einen Namen, sowie die Funktion anlegen und ablegen
