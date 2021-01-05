@@ -1,6 +1,5 @@
 package zusatzaufgaben.B2;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ReverseArray {
@@ -8,7 +7,7 @@ public class ReverseArray {
     private int[] arr = new int[1];
 
     public void setArr() {
-        int arrVal = 0;
+        int arrVal;
         String abbruch;
         Scanner read = new Scanner(System.in);
         System.out.print("Starte den Einlesevorgang. Schreiben Sie 'Abbruch', wenn Sie den Vorgang beenden wollen.");

@@ -20,11 +20,8 @@ public class Einkaufen {
         String ja = "ja";
         String Ja = "Ja";
         Scanner read = new Scanner(System.in);
-        try
-        {
-            System.out.println("Wollen Sie einen weiteren Preis einlesen?: ");
-            input = read.next().toLowerCase();
-            while (!exit.equals(input) && input.equals(ja)) {
+        try {
+            do {
                 System.out.println("Wollen Sie einen weiteren Preis einlesen?: ");
                 input = read.next();
                 if (!exit.equals(input)) {
@@ -32,13 +29,12 @@ public class Einkaufen {
                 }
                 index++;
             }
-        }catch (ArrayIndexOutOfBoundsException PreisListe)
-        {
+            while (!exit.equals(input) && input.equals(ja));
+
+        } catch (ArrayIndexOutOfBoundsException PreisListe) {
             System.err.print("Fancy:Leider können nur 10 Preise gespeichert werden");
             System.out.println("Leider können nur 10 Preise gespeichert werden");
-        }
-        catch (InputMismatchException i)
-        {
+        } catch (InputMismatchException i) {
             System.out.println("Keine Sonderzeichen erlaubt! Bitte antworten Sie mir ja oder nein auf die Frage.");
         }
 
@@ -51,9 +47,7 @@ public class Einkaufen {
             System.out.println("Bitte Preis einlesen:");
             appendValue = value.nextInt();
             priceArray[index] = appendValue;
-        }
-        catch (InputMismatchException Preis)
-        {
+        } catch (InputMismatchException Preis) {
             System.out.println("Keine Sonderzeichen erlaubt! Bitte an geben Sie eine gaze Zahl ein.");
         }
 

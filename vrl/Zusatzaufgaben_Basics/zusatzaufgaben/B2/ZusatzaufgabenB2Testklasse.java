@@ -77,6 +77,8 @@ public class ZusatzaufgabenB2Testklasse {
         System.out.print("\n" + "Aufgabe 18: ");
         ReverseArray arrObj = new ReverseArray();
         arrObj.aufgabe20();
+        System.out.print("\n" + "Aufgabe 22: ");
+        Euklid ggT = new Euklid(180, 37);
 
     }
 
