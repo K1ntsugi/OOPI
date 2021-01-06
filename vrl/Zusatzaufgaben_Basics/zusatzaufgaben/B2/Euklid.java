@@ -1,32 +1,52 @@
 package zusatzaufgaben.B2;
 
 public class Euklid {
-    /*Wh:
-    ggt(x,y) = x:y = z0 R != 0
-    y : z0 = z1 R ...
-    etc
-    */
 
-    private int a;
-    private int b;
+    private int div;
+    private int mod;
+    private int x, y;
 
-    public Euklid(int a, int b) {
-        this.a = a;
-        this.b = b;
+    public Euklid(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public void getEuklid()
-    {
-
+    public int getDiv() {
+        return div;
     }
 
-    public void euklidAlgo(int a, int b) {
-        int c;
-        if (c == 0) {
-            System.out.print("Der ggT nach Eukild für die Zahlen " + a + " und " + b + "lautet:");
-            System.out.print("Zahl die ich noch berechnen muss");
+    public int getMod() {
+        return mod;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void printEuklid(Euklid obj) {
+        int ggT = euklidAlgo(x, y);
+        System.out.println("Der ggT für " + x + " und " + y + " lautet: " + ggT);
+    }
+
+    private int euklidAlgo(int a, int b) {
+        if (a == b) {
+            return a;
+        } else if (a > b) {
+            return euklidAlgo(a - b, b);
         } else {
-
+            return euklidAlgo(a, b - a);
         }
     }
 }

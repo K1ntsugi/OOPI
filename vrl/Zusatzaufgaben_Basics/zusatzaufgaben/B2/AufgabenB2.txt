@@ -118,7 +118,7 @@ Math.abs(-1.3) den Wert 1.3.
 einen Namen, einen Captain (boolean), und eine bestimmte Anzahl an
 Passagieren. Implementieren Sie: einen Konstruktor mit Namen. Eine
 Funktion Captainzusteigen und Captainaussteigen. Implementieren Sie die
-Funktion fliegen. Wird diese ohn Captain an Board aufgerufen, soll eine
+Funktion fliegen. Wird diese ohne Captain an Board aufgerufen, soll eine
 exception geworfen werden. Ansonsten soll ausgegeben werden, dass das
 Flugzeug abgehoben hat. Erstellen Sie eine toString() Methode, die einen
 String zurückgibt und Auskunft über den aktuellen Zustand gibt.

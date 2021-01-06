@@ -37,7 +37,6 @@ public class Einkaufen {
         } catch (InputMismatchException i) {
             System.out.println("Keine Sonderzeichen erlaubt! Bitte antworten Sie mir ja oder nein auf die Frage.");
         }
-
     }
 
     public static void price(int index) {
@@ -50,7 +49,6 @@ public class Einkaufen {
         } catch (InputMismatchException Preis) {
             System.out.println("Keine Sonderzeichen erlaubt! Bitte an geben Sie eine gaze Zahl ein.");
         }
-
     }
 
     public static void listPrice() {
@@ -61,6 +59,14 @@ public class Einkaufen {
         }
         subtotal = sum;
         sum *= 1.16;
+        System.out.println("Die Einzelpreise lauten: ");
+
+        for (int k : priceArray) {
+            if (k != 0) {
+                System.out.println(k);
+            }
+        }
+
         System.out.println("Die Summe der einzelnen Artikel beträgt: " + subtotal + " €");
         System.out.println("Mit Mehrwertsteuer sind das: " + sum + " €");
     }
