@@ -14,4 +14,5 @@ abstract class Konto5 {
         String str = "Kontonummer: " + nummer + "\nKontostand: " + stand;
         return str;
     }
+
 }

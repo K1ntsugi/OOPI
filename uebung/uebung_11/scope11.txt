@@ -1,0 +1,47 @@
+Übungsblatt 10
+Aufgabe 1 – Mathe – Klasse
+Erstellen Sie eine Klasse mit dem Namen Mathe, die folgende Methoden besitzt:
+• double div (double a, double b)
+• double sub (double a, double b).
+Entscheiden Sie selbst, ob die Methoden besser als Klassen- oder Objektmethoden
+implementiert werden.
+In dieser Welt existieren keine negativen Zahlen und auch keine Zahlen, die größer als 1420
+sind – weder als Argument noch als Rückgabewert.
+Beide Funktionen sollen einen Fehler vom Typ InvalidMatheException (abgeleitet von
+Exception) generieren, sobald ein negatives Ergebnis vorliegt, ein Wert größer 1420 oder ein
+Infinity-Wert auftritt.
+Erstellen Sie eine Klasse MeineMatheWelt, die die beiden Funktionen nutzt und folgende
+Aufgaben berechnet:
+• 2.5 / 7.0
+• 33.3 / 0.0
+• 4000.4 / 2.0
+• 42.42 – 2.42
+• 12.0 – 24.0
+• 1421.0 – 1.0
+Fangen Sie Fehler mit try-catch ab!
+
+
+Aufgabe 2 – Objektorientierung
+Erstellen Sie eine Klasse Punkt2D zur Darstellung von Punkten im 2-D. Ergänzen Sie die
+fehlenden Attribute und implementieren Sie die Methoden.
+Es soll zwei Konstruktoren geben:
+• Ein Konstruktor mit den Parametern x und y
+• Ein Standardkonstruktor ohne Parameter, der einen zufälligen Punkt erzeugt
+Die Methode translate soll den Punkt um dx und dy verschieben. Die Methode distanceTo
+soll den Abstand zu einem weiteren Punkt ermitteln und zurückgeben. Die Methode
+mirrorPoint soll einen neuen Punkt zurückgeben, der an (0,0) punktgespiegelt ist.
+
+
+public class Punkt2D
+{
+//Attribute
+//Konstruktoren
+public double distanceTo(Punkt 2D p)
+…
+public String toString()
+…
+public void translate(double dx, double dy)
+…
+public Punkt2D mirrorPoint()
+…
+}
