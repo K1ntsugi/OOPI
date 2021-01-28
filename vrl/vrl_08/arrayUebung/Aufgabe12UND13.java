@@ -11,19 +11,21 @@ public class Aufgabe12UND13
 {
   public static void main (String [] args)
   {
-    int misch [4] = {1, 2, 3, 4};
-    int masch [5] = {1, 2, 3, 4, 5};
-    
-    public static void ausgeben (int [] [] out)
+    int[] misch  = {1, 2, 3, 4};
+    int[] masch = {1, 2, 3, 4, 5};
+    int [] [] mischMasch = new int [misch.length] [masch.length];
+    ausgeben(mischMasch);
+  }
+
+  public static void ausgeben (int [] [] out)
+  {
+    for (int i = 0; i < out.length; i++)
     {
-      for (int i = 0; i < out.length; i++)
+      for (int j = 0; j < out[i].length; j++)
       {
-        for (int j = 0; j < out[i].length; j++)
-        {
-          System.out.print(out[i][j] + " ");
-        }
-        System.out.println();
+        System.out.print(out[i][j] + " ");
       }
+      System.out.println();
     }
   }
 }

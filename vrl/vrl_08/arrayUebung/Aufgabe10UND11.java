@@ -17,6 +17,7 @@ public class Aufgabe10UND11
     int [] [] tabelle = new int [spalten] [zeilen];
     int [] cacheSpalten = new int [spalten];
     int [] cacheZeilen = new int [zeilen];
+    int [] [] container = new int[spalten][zeilen];
 
     for (int i = 0; i < tabelle.length; i++)
     {

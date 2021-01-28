@@ -32,7 +32,7 @@ Fragen:
     -> Weil sie nicht an ein Objekt gebunden ist.
 
 8. Dürften Sie auch zwei main-Funktionen definieren?
-    -> Nein
+    -> Nein, außer in einer seperaten Klasse
 
 9. Was bedeuten die Übergabeparameter in main?
     -> Einlesen über die Konsole bei Programmaufruf
@@ -158,93 +158,169 @@ Fragen:
 
 27. Was bedeutet x = (x >= 0) ? +1 : -1;
     -> Wenn x >= 0 {x=1} else {x=-1};
+
 ---------------------------------------------------------------------------------------
 28. Schreiben Sie folgende Anweisungen als eine, indem Sie den ternären
     Operator verwenden: falls y > 0 und y<10 ist soll x = true sein, sonst false
+    x = (y > 0 && y < 10) ? true : false;
 
 29. Wie viele Durchläufe hat folgende Schleife
-    a. for(int x=0; x<10; x++)
-    b. for(int x=0; x<10; ++x)
-    c. for(int x=10; x<10; x--)
-    d. for(int x=5; x<5; x++)
-    e. do {...} while (false)
+    a. for(int x=0; x<10; x++) -> 10
+    b. for(int x=0; x<10; ++x) -> 10
+    c. for(int x=10; x<10; x--) -> 0
+    d. for(int x=5; x<5; x++) -> 0
+    e. do {...} while (false) -> 1
     f. formulieren sie für a-e entsprechende while – Schleifen
     g. erzeugen Sie eine endlose schleife mit for und while
 
 30. Was ist der Unterschied zwischen break und continue? Geben sie jeweils ein
-Beispiel
+    Beispiel.
+    Break und continue sind Antagonisten. Break beendet die ausführung des aktuellen
+    Befehls im jeweiligen scope, continue führt das Programm an anderer Stelle wieder aus.
 
 31. Was ist der Unterschied zwischen Funktionsdefinition und Funktionsaufruf?
 
 32. Was ist ein Argument? Was ein Parameter?
+    Parameter steht bei Funktionsdefinition in den Klammern. Argument ist das, was beim
+    Aufruf tatsächlich übergeben wird
 
 33. Muss ein Funktionsargument den gleichen Namen haben wie der
-Funktionsparameter?
+Funktionsparameter? -> NOPE
 
 34. Sie wollen in einer Funktion mitzählen, wie oft diese aufgerufen wurde. Wie
 realisieren sie dies?
+    static int counter; -> über der Main und in Funktion implementiert als counter++;
+
 35. Was ist call by value und was ist call-by-reference?
-a. Wann gilt in java welche Form?
+    a. Wann gilt in java welche Form?
+    Grundsätzlich wird jeder Methode seine Parameter als Call-by-Value übergeben.
+    Werden Objekte übergeben, findet ein Call-by-Value statt.
+
 36. Wie würde Sie eine einzelne integer Variable by reference übergeben?
+    Als Wrapper-object.
+
 37. Wie sehen Parameter und Argument zur Übergabe eines int-Feldes aus?
-a. Wie seht die Rückgabe eines solchen Feldes aus?
+    a. Wie seht die Rückgabe eines solchen Feldes aus?
+    public int [] foo (int [] a)
+    {
+        return a;
+    }
+
 38. Wie sieht die Übergabe eines zweidimensionalen String arrays aus?
+    public boolean blabla (String [] [] bam)
+
 39. Was ist der Unterschied zwischen einer flachen und einer tiefen Kopie?
+    Flache Kopie legt nur Referenz auch gleiches Obj. Tiefe Kopie erstellt auch
+    ein objekt im Speicher.
+
 40. Sie haben eine Funktion, der ein zweidimensionales String-array übergeben
 wird. Wie können Sie die erste Zeile zurückgeben? Wie können Sie eine
 Kopie der ersten Zeile zurückgeben?
+    public static int[] getFirstLine(int[][] arr) {
+            int[] tempArr = new int[arr[0].length];
+            for (int i = 0; i < arr[0].length; i++) {
+                tempArr[i] = arr[0][i];
+            }
+            return tempArr;
+        }
+
 41. Wie können Sie ein array arr aus MyObject – Objekten mit for-each
 durchlaufen?
+    for (MyObject k : objArr)
+    {
+        System.out.println(k);
+    }
+
 42. Worin liegt der wesentliche Unterschied zwischen for-each und for(...)
+    for-each nimmt mir die Längenberechnung für den array ab.
+    Kein Zugriff auf die iterierte Variable (i)
+
 43. Wie rufen Sie einen Konstruktor im Konstruktor auf? Und warum sollten Sie
-das überhaupt wollen?
+    das überhaupt wollen?
+    Mit der super-Referenz. Um Konstruktoren zu erben oder bestehende zu verketten.
+
 44. Wie rufen Sie einen Konstruktor der Oberklasse auf?
+    public myClass (String name)
+    {
+        super(name); // muss immer zuerst aufgerufen werden
+    }
+
 45. Welcher syntaktische Unterschied besteht zwischen Konstruktor und einer
-gewöhnlichen Methode?
+    gewöhnlichen Methode?
+    Der Konstrukor heißt immer wie die Klasse selbst und er kann nie statisch
+    deklariert werden.
+
 46. Können Sie innerhalb eines Konstruktors eine Objektmethode aufrufen?
+    Ja, es muss jedoch im Kontext der Vererbung geschehen.
+    Wenn nur eine Klasse gegeben ist, dann nicht, weil der Konstruktor
+    ja erst das Objekt erstellt.
+
 47. Können Sie in einer Objektmethode einen Konstruktor aufrufen?
+    Nein. (Begründung?)
+
 48. Erklären Sie folgende Begriffe:
-a. Klasse
-b. Objekt
-c. Object
-d. Instanz
-e. Initialisierung
-f. Konstruktor
-g. Desktruktor
-h. Garbage Collector
-i. Vererbung
-j. Polymorphismus
+a. Klasse -> Namesraum eines Programms
+b. Objekt -> Instanzen einer Klasse
+c. Object -> Objektklasse von der alle Klassen erben
+d. Instanz -> Das erstellte Objekt im Speicher
+e. Initialisierung -> ALso bitte
+f. Konstruktor -> Erstellt Objekte
+g. Desktruktor -> Zerstört Objekte nach Benutzung
+h. Garbage Collector -> Räumt dynamisch den Heap auf
+i. Vererbung -> Wiederverwendung von Methoden und Attribute einer anderen Klasse
+j. Polymorphismus -> Differenzierung von Methoden auch über verschiedene Klassen hinweg
+
 49. Wie können Sie eine double-Variable bei der Ausgabe auf 3
 Nachkommastellen beschränken?
+    System.out.printf("%1,567%n", 15678);
+
 50. Wie können Sie eine Ausgabe links- oder rechtsbündig gestalten?
+    System.out.printf("%100s", "Rechtsbündig");
+
 51. Was ist eine rekursive Funktion?
+    Eine Funktion die sich selbst aufruft
+
 52. Richtig oder falsch? Wenn falsch, dann verbessern:
 a. Eine statische Methode kann ohne Objekt aufgerufen werden
+    Richtig
 b. Eine statische Methode kann außerhalb einer Klasse definiert werden
+    Falsch
 c. Eine statische Methode hat keinen Rückgabewert
+    Falsch
 d. Statische Methoden können nicht vererbt werden
+    Falsch
 e. Statische Methoden können nur auf statischen Attributen arbeiten
+    Falsch
 f. Eine Klasse kann mehrere statische Methoden haben
+    Richtig
 g. Eine Objektmethode kann eine statische Methode aufrufen
+    Richtig
 53. Entwerfen Sie je ein Beispiel für folgende Relationen
-a. Is
-b. Has
-c. Uses
+a. Is -> Ein Obj der Klasse A kennt ein Obj der Klasse B und umgekehrt
+b. Has -> Ein Obj der Klasse B ist Teil von einem Objekt der Klasse A
+c. Uses -> Obj der Klasse B sind existentiell abhängig von genau einen Objekt der Klasse A
+
 54. Entwerfen Sie ein Beispiel für Polymorphismus in einem Array
+
 55. Was bewirkt das final-Schlüsselwort bei
 a. Einer Variablen
 b. Einer Klasse
 c. Einer Methode
+
 56. Sichtbarkeit
 a. Was bedeutet public?
 b. Was ist die Standard-Sichtbarkeit? Wie ist diese definiert?
 c. Was passiert, wenn man die main Methode private setzt?
 d. Was passiert, wenn man die Klasse mit der main-Methode private
 setzt?
+
 57. Warum müssen in einem Interface nicht mehr alle Methoden als public und
 abstract gekennzeichnet werden?
+
 58. Was ist bei Operatoren mit Assoziativität und Priorität gemeint?
+
 59. Was sind unäre, binäre und ternäre Operatoren? Geben Sie je ein Beispiel
+
 60. Richtig oder falsch?
 a. Eine abstrakte Klasse darf nicht final sein
 b. Eine abstrakte Klasse darf keine final – Methoden haben

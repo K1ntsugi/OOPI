@@ -1,0 +1,41 @@
+Übungsblatt 11
+Aufgabe 1 Polymorphie und Exceptions
+Ergänzen im folgenden Programm die main-Funktion von Krankenhaus und implementieren
+Sie die Klassen Mitarbeiter, Krankenpfleger und Arzt. Beachten Sie die Kommentare im
+Quellcode, um die main-Methode zu füllen.
+Wird der Konstruktor von Mitarbeiter mit einem leeren Namen aufgerufen, soll dieser eine
+Exception werfen. Kümmern Sie sich um das Abfangen innerhalb der main.
+public class Krankenhaus
+{
+ public static void main(String[] args)
+ {
+ Mitarbeiter frederike = new Krankenpfleger("Mueller");
+ Mitarbeiter karla = new Arzt("Lauterbach");
+ Mitarbeiter christiane = new Arzt("Drosten");
+ //fügen Sie alle Mitarbeiter in ein Array
+ //Durchlaufen Sie das Array und übergeben Sie jeden Mitarbeiter an die Funktion
+vorstellung_starten
+
+ /*Ausgabe:
+ * Krankenpflegerin Mueller sagt hallo
+ * Stationsärztin Lauterbach sagt hallo
+ * Stationsärztin Drosten sagt hallo
+ */
+
+ }
+ public void vorstellung_starten(Mitarbeiter m)
+ {
+ m.vorstellen();
+ }
+}
+s
+abstract class Mitarbeiter
+{
+ protected String name;
+}
+class Krankenpfleger
+{
+}
+class Arzt
+{
+}

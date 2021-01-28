@@ -17,7 +17,6 @@ public class uclass_Student extends Mensch {
 
     public void Laufen() {
         System.out.println(" laeuft nicht, weil er/sie studiert");
-        ;
     }
 
     public void Schlafen() {
@@ -28,7 +27,6 @@ public class uclass_Student extends Mensch {
 
     public void Jagen() {
         System.out.println("Studenten jagen nicht");
-        ;
     }
 
     public void studieren() {
