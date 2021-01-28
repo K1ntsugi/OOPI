@@ -2,11 +2,10 @@ package Wissenskontrolle1.Vererbung;
 
 public class TestKlasse {
     public static void main(String[] args) {
-        try
-        {
+        try {
             Proff_Babsi babsi1 = new Proff_Babsi("babsi", 58, 140);
             Proff_Babsi babsi2 = new Proff_Babsi("babsi-Schwester", 58, 40);
-            Adamsky DER_EINE = new Adamsky("Flori", 35, 110, HföD.HfödD);
+            Adamsky DER_EINE = new Adamsky("Flori", 35, 110, HAW.HAW);
             Professor[] metameta = new Professor[3];
 
             metameta[0] = babsi1;
@@ -24,16 +23,10 @@ public class TestKlasse {
             Professor prof = new Adamsky("adam", 22, 111, HAW.HAW);
             prof.belehren();
 
-        }catch (Exception e)
-        {
+            babsi1.getFach();
+
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
-
-        //Arrays
-
-
-
-
     }
 }

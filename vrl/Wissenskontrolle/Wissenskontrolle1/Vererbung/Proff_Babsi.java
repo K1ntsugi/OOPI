@@ -18,4 +18,9 @@ public class Proff_Babsi extends Professor {
         System.out.println("Ist doch TRIVIAL!!!");
     }
 
+    public void getFach()
+    {
+        System.out.println("Meine Fächer sind: " + Fächer.Mathematik);
+    }
+
 }
